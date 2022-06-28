@@ -11,7 +11,7 @@ public class Main {
         System.out.println();
 
         Player player = new Player("Leonardo");
-        Game game = new Game();
+        //Game game = new Game();
         System.out.println();
         player.callGame();
 
