@@ -8,7 +8,18 @@ import java.util.Random;
 
 //import static com.sun.tools.jdeprscan.CSV.split;
 
-public class Words {
+public final class Words {
+
+    private static Words instance = null;
+
+    private Words() {}
+
+    public static Words getInstance() {
+        if (instance==null) {
+            instance = new Words();
+        }
+        return instance;
+    }
 
     ArrayList <Object> words = new ArrayList<>();
 

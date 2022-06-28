@@ -14,7 +14,11 @@ public class Game {
     private int gibbet;
 
     public Game() {
-        this.word = new Words().toString();
+        //this.word = new Words().toString();
+        Words words;
+        words = Words.getInstance();
+
+        this.word =  words.toString();
         this.lives = 6;
         lettersUsed = "";
     }
@@ -287,6 +291,7 @@ public class Game {
     public void wineer(){
         System.out.println("\n  [VENCEU!!!]");
         System.out.println("  [PARABÉNS]  ");
+
     }
     public void endGame() {
         int aux = 0;
@@ -325,7 +330,9 @@ public class Game {
         gibbet = 8;
 
         int victory = 0;
-        Words words = new Words();
+        //Words words = new Words();
+        Words words;
+        words = Words.getInstance();
 
         // abre o arquivo texto
         words.readFile();
